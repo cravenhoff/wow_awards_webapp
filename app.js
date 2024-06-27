@@ -1,6 +1,18 @@
 const express = require('express');
 const app = express();
 const port = 3033;
+const mongoose = require('mongoose');
+
+// Connect to MongoDB server running in background
+mongoose.connect('mongodb://localhost:27017/wow-awards')
+.then(() => {
+    console.log('MONGODB CONNECTION SUCCESSFUL!')
+})
+.catch(err => {
+    console.log('MONGODB CONNECTION ERROR');
+    console.log(err);
+});
+
 
 // Welcome route (index)
 app.get('/', (req, res) => {
