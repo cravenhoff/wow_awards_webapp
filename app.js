@@ -37,6 +37,12 @@ app.use(express.urlencoded({extended: true}));
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 
+// Handle GET 'recipients' route
+app.get('/recipients', async(req, res, next) => {
+    const recipients = await Recipient.find({});
+    console.log('Recipients index route hit')
+    res.render('recipients/index', {recipients, categories});
+});
 
 // Welcome route (index)
 app.get('/', (req, res) => {
