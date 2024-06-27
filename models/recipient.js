@@ -1,8 +1,7 @@
 const mongoose = require('mongoose'); // require mongoose ODM package
-const Schema = mongoose.Schema;
 
 // Define 'recipient' collection schema
-const recipientSchema = new Schema({
+const recipientSchema = new mongoose.Schema({
     year: {
         type: Number,
         required: [true, 'Award year cannot be blank']
@@ -38,7 +37,7 @@ const recipientSchema = new Schema({
 });
 
 // Compile schema into recipient model
-const Recipient = mongoose.Model('Recipient', recipientSchema);
+const Recipient = mongoose.model('Recipient', recipientSchema);
 
 // Export recipient model
 module.exports = Recipient;
