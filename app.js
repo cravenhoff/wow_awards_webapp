@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3033;
 const mongoose = require('mongoose');
+const path = require('path');
 
 // Require model
 const Recipient = require('./models/recipient');
@@ -27,6 +28,14 @@ mongoose.connect('mongodb://localhost:27017/wow-awards')
     console.log('MONGODB CONNECTION ERROR');
     console.log(err);
 });
+
+// Set settings for static assets
+app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.urlencoded({extended: true}));
+
+// Set application setting properties for EJS render file
+app.set('views', path.join(__dirname, '/views'));
+app.set('view engine', 'ejs');
 
 
 // Welcome route (index)

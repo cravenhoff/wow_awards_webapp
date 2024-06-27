@@ -50,8 +50,8 @@ const seedRecipients = [
     }
 ];
 
-Recipient.insertMany(seedRecipients).then(res => {
-    console.log(res)
-}).catch(err => {
-    console.log(err);
-});
+// Recipient.insertMany(seedRecipients).then(res => {
+//     console.log(res)
+// }).catch(err => {
+//     console.log(err);
+// });
