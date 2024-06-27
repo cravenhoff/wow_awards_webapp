@@ -1,4 +1,4 @@
-# wow_awards_webapp
+# Westpac Outstanding Women Awards Portal
 
 The official open-source web application for the PNG Westpac Outstanding Women (WOW) Awards.
 
