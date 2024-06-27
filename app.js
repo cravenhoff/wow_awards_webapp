@@ -8,6 +8,7 @@ const path = require('path');
 // Add bootstrap or tailwind and spruce up UI and layout of index page
 // Add sorting category by year and by award category
 // Figure out how to capture two award categorie for a single recipient
+// Figure out and add error handling and middleware
 
 // Require model
 const Recipient = require('./models/recipient');
