@@ -10,15 +10,18 @@ const recipientSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Award category cannot be blank'],
         enum: [
-            'Public Sector Award', 
-            'Entrepreneurship Award', 
-            'Private Sector Award', 
-            'Community Responsibility Award',
-            'Young Achiever Award',
-            'Sports Award',
-            'Not-For Profit Award',
-            'Westpac Outstanding Woman Award'
+            'Public Sector', 
+            'Entrepreneurship', 
+            'Private and Corporate Sector', 
+            'Community Responsibility',
+            'Young Achiever',
+            'Sports',
+            'Not For Profit',
+            'Overall Westpac Outstanding Women'
         ]
+    },
+    sponsor: {
+        type: String
     },
     first_name: {
         type: String,

@@ -8,14 +8,14 @@ const Recipient = require('./models/recipient');
 
 // Hard-code award categories for sorting
 const categories = [
-    'Public Sector Award', 
-    'Entrepreneurship Award', 
-    'Private Sector Award', 
-    'Community Responsibility Award',
-    'Young Achiever Award',
-    'Sports Award',
-    'Not-For Profit Award',
-    'Westpac Outstanding Woman Award'
+    'Public Sector', 
+    'Entrepreneurship', 
+    'Private and Corporate Sector', 
+    'Community Responsibility',
+    'Young Achiever',
+    'Sports',
+    'Not For Profit',
+    'Overall Westpac Outstanding Women'
 ];
 
 // Connect to MongoDB server running in background
