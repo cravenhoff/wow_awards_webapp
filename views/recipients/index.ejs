@@ -7,5 +7,14 @@
 </head>
 <body>
     <h1>Westpac Reconizes Outstanding Women in Papua New Guinea</h1>
+    <!-- Output query results for all recipients in the database -->
+    <% for(recipient of recipients) { %>
+        <ul>
+            <li><img src="<%= recipient.profile_photo %>" alt="" height="100"></li>
+            <li><%= recipient.first_name %> <%= recipient.last_name %></li>
+            <li><%= recipient.sponsor %> <%= recipient.award_category %></li>
+            <li><%= recipient.year %></li>
+        </ul>
+    <% } %>
 </body>
 </html>
