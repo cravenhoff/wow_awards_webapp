@@ -7,5 +7,10 @@
 </head>
 <body>
     <h1><%= recipient.first_name %> <%= recipient.last_name %></h1>
+    <ul>
+        <li><img src="../<%= recipient.profile_photo %>" alt="" height="100"></li>
+        <li><%= recipient.sponsor %> <%= recipient.award_category %></li>
+        <li><%= recipient.year %></li>
+    </ul>
 </body>
 </html>
