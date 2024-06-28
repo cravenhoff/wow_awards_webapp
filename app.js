@@ -55,7 +55,7 @@ app.get('/recipients/:id', async (req, res) => {
     const {id} = req.params;
     const recipient = await Recipient.findById(id);
     console.log(`Accessing ${recipient}`);
-    res.send(`Recipient ${recipient} accessed.`);
+    res.render('recipients/show', {recipient});
 });
 
 // Welcome route (index)
