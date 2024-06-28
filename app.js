@@ -51,10 +51,11 @@ app.get('/recipients', async(req, res, next) => {
 });
 
 // Handle the GET route for 'recipients' show page
-app.get('/recipients/:id', (req, res) => {
+app.get('/recipients/:id', async (req, res) => {
     const {id} = req.params;
-    console.log(`Accessing recipient ID ${id}`);
-    res.send(`Recipient ID: ${id} accessed.`);
+    const recipient = await Recipient.findById(id);
+    console.log(`Accessing ${recipient}`);
+    res.send(`Recipient ${recipient} accessed.`);
 });
 
 // Welcome route (index)
