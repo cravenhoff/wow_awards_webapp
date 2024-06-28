@@ -51,6 +51,12 @@ app.get('/recipients', async(req, res, next) => {
     res.render('recipients/index', {recipients, categories});
 });
 
+// Handle route for 'new' recipients
+app.get('/recipients/new', (req, res) => {
+    console.log('New recipient route hit');
+    res.render('recipients/new');
+});
+
 // Handle the GET route for 'recipients' show page
 app.get('/recipients/:id', async (req, res) => {
     const {id} = req.params;
