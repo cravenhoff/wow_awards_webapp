@@ -6,13 +6,16 @@
     <title>WOW Awards Portal - Home</title>
 </head>
 <body>
+    <nav>
+        <a href="/recipients/new">Add Recipient</a>
+    </nav>
     <h1>Westpac Reconizes Outstanding Women in Papua New Guinea</h1>
     <!-- Output query results for all recipients in the database -->
     <% for(recipient of recipients) { %>
         <ul>
             <li><img src="<%= recipient.profile_photo %>" alt="" height="100"></li>
             <li><a href="/recipients/<%= recipient.id %>"><%= recipient.first_name %> <%= recipient.last_name %></a></li>
-            <li><%= recipient.sponsor %> <%= recipient.award_category %></li>
+            <li><%= recipient.sponsor %> <%= recipient.award_category %> Award</li>
             <li><%= recipient.year %></li>
         </ul>
     <% } %>
