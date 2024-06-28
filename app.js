@@ -57,6 +57,13 @@ app.get('/recipients/new', (req, res) => {
     res.render('recipients/new');
 });
 
+app.post('/recipients', (req, res) => {
+    const newRecipient = new Recipient(req.body);
+    newRecipient.save();
+    console.log(newRecipient.id);
+    res.send(req.body);
+});
+
 // Handle the GET route for 'recipients' show page
 app.get('/recipients/:id', async (req, res) => {
     const {id} = req.params;
