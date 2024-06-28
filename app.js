@@ -9,6 +9,7 @@ const path = require('path');
 // Add sorting category by year and by award category
 // Figure out how to capture two award categorie for a single recipient
 // Figure out and add error handling and middleware
+// Add partials to separate out the header and footer markup
 
 // Require model
 const Recipient = require('./models/recipient');
