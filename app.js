@@ -10,6 +10,7 @@ const path = require('path');
 // Figure out how to capture two award categorie for a single recipient
 // Figure out and add error handling and middleware
 // Add partials to separate out the header and footer markup
+// Update BETTY HIGGINS 'award category sponsor' field
 
 // Require model
 const Recipient = require('./models/recipient');
@@ -60,8 +61,7 @@ app.get('/recipients/new', (req, res) => {
 app.post('/recipients', (req, res) => {
     const newRecipient = new Recipient(req.body);
     newRecipient.save();
-    console.log(newRecipient.id);
-    res.send(req.body);
+    res.redirect(`/recipients/${newRecipient.id}`);
 });
 
 // Handle the GET route for 'recipients' show page
