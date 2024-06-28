@@ -11,7 +11,7 @@
     <% for(recipient of recipients) { %>
         <ul>
             <li><img src="<%= recipient.profile_photo %>" alt="" height="100"></li>
-            <li><%= recipient.first_name %> <%= recipient.last_name %></li>
+            <li><a href="/recipients/<%= recipient.id %>"><%= recipient.first_name %> <%= recipient.last_name %></a></li>
             <li><%= recipient.sponsor %> <%= recipient.award_category %></li>
             <li><%= recipient.year %></li>
         </ul>
