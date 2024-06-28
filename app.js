@@ -17,7 +17,7 @@ const Recipient = require('./models/recipient');
 // Hard-code award categories for sorting
 const categories = [
     'Public Sector', 
-    'Entrepreneurship', 
+    'Entrepreneur', 
     'Private and Corporate Sector', 
     'Community Responsibility',
     'Young Achiever',

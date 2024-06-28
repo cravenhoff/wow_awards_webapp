@@ -11,7 +11,7 @@ const recipientSchema = new mongoose.Schema({
         required: [true, 'Award category cannot be blank'],
         enum: [
             'Public Sector', 
-            'Entrepreneurship', 
+            'Entrepreneur', 
             'Private and Corporate Sector', 
             'Community Responsibility',
             'Young Achiever',

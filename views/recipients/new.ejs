@@ -8,18 +8,30 @@
 <body>
     <h1>Add New Recipient Form</h1>
     <form action="" method="POST">
-        <label for="recipient_first_name">Recipient First Name</label>
-        <input type="text" id="recipient_first_name" name="recipient_first_name">
-        <label for="recipient_last_name">Recipient Last Name</label>
-        <input type="text" id="recipient_last_name" name="recipient_last_name">
-        <label for="recipient_award_category">Award Category</label>
-        <input type="text" id="recipient_award_category" name="recipient_award_category">
-        <label for="recipient_year">Year Awarded</label>
-        <input type="text" id="recipient_year" name="recipient_year">
-        <label for="recipient_profile">Recipient Profile Description</label>
-        <input type="text" id="recipient_profile" name="recipient_profile">
-        <label for="recipient_photo">Recipient Photo</label>
-        <input type="text" id="recipient_photo" name="recipient_photo">
+        <div>
+            <label for="recipient_first_name">Recipient First Name</label><br>
+            <input type="text" id="recipient_first_name" name="recipient_first_name">
+        </div>
+        <div>
+            <label for="recipient_last_name">Recipient Last Name</label><br>
+            <input type="text" id="recipient_last_name" name="recipient_last_name">
+        </div>
+        <div>
+            <label for="recipient_award_category">Award Category</label><br>
+            <input type="text" id="recipient_award_category" name="recipient_award_category">
+        </div>
+        <div>
+            <label for="recipient_year">Year Awarded</label><br>
+            <input type="text" id="recipient_year" name="recipient_year">
+        </div>
+        <div>
+            <label for="recipient_profile">Recipient Profile Description</label><br>
+            <textarea name="recipient_profile" id="recipient_profile" rows="4" cols="50"></textarea>
+        </div>
+        <div>
+            <label for="recipient_photo">Recipient Photo</label><br>
+            <input type="text" id="recipient_photo" name="recipient_photo">
+        </div>
         <button>Create Recipient</button>
     </form>
 </body>
