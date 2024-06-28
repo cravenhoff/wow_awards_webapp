@@ -50,6 +50,13 @@ app.get('/recipients', async(req, res, next) => {
     res.render('recipients/index', {recipients, categories});
 });
 
+// Handle the GET route for 'recipients' show page
+app.get('/recipients/:id', (req, res) => {
+    const {id} = req.params;
+    console.log(`Accessing recipient ID ${id}`);
+    res.send(`Recipient ID: ${id} accessed.`);
+});
+
 // Welcome route (index)
 app.get('/', (req, res) => {
     res.send('Welcome to the Papua New Guinea Westpac Outsanding Women Awards Portal, the home of incredible women doing incredible things.');
