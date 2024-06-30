@@ -3,6 +3,7 @@ const app = express();
 const port = 3033;
 const mongoose = require('mongoose');
 const path = require('path');
+const methodOverride = require('method-override');
 
 /* TODO-LIST */
 // Add bootstrap or tailwind and spruce up UI and layout of index page
@@ -40,6 +41,7 @@ mongoose.connect('mongodb://localhost:27017/wow-awards')
 // Set settings for static assets
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.urlencoded({extended: true}));
+app.use(methodOverride('_method'));
 
 // Set application setting properties for EJS render file
 app.set('views', path.join(__dirname, '/views'));
@@ -62,6 +64,12 @@ app.post('/recipients', (req, res) => {
     const newRecipient = new Recipient(req.body);
     newRecipient.save();
     res.redirect(`/recipients/${newRecipient.id}`);
+});
+
+// Handle the PUT route for 'recipients'
+app.get('/recipients/:id/edit', async (req, res) => {
+    console.log('PUT route for recipient edit hit');
+    res.send('Editing recipient');
 });
 
 // Handle the GET route for 'recipients' show page
