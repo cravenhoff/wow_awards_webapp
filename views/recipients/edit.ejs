@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Recipient - WOW Awards Portal</title>
+    <title>Edit Recipient: <%= recipient.first_name %> <%= recipient.last_name %> - WOW Awards Portal</title>
 </head>
 <body>
-    <h1>Edit Recipient Form</h1>
+    <h1>Edit Recipient: <%= recipient.first_name %> <%= recipient.last_name %></h1>
     <form action="/recipients?_method=PUT" method="POST">
         <div>
             <label for="first_name">Recipient First Name</label><br>

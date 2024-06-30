@@ -70,8 +70,7 @@ app.post('/recipients', (req, res) => {
 app.get('/recipients/:id/edit', async (req, res) => {
     const {id} = req.params;
     const recipient = await Recipient.findById(id);
-    console.log(recipient);
-    res.render('recipients/edit');
+    res.render('recipients/edit', {recipient});
 });
 
 // Handle the GET route for 'recipients' show page
