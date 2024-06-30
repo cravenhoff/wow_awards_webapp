@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Recipient - WOW Awards Portal</title>
+</head>
+<body>
+    <h1>Edit Recipient Form</h1>
+    <form action="/recipients" method="POST">
+        <div>
+            <label for="first_name">Recipient First Name</label><br>
+            <input type="text" id="first_name" name="first_name">
+        </div>
+        <div>
+            <label for="last_name">Recipient Last Name</label><br>
+            <input type="text" id="last_name" name="last_name">
+        </div>
+        <div>
+            <label for="award_category">Award Category</label><br>
+            <input type="text" id="award_category" name="award_category">
+        </div>
+        <div>
+            <label for="sponsor">Category Sponsor</label><br>
+            <input type="text" id="sponsor" name="sponsor">
+        </div>
+        <div>
+            <label for="year">Year Awarded</label><br>
+            <input type="text" id="year" name="year">
+        </div>
+        <div>
+            <label for="profile_description">Recipient Profile Description</label><br>
+            <textarea name="profile_description" id="profile_description" rows="4" cols="50"></textarea>
+        </div>
+        <div>
+            <label for="profile_photo">Recipient Photo</label><br>
+            <input type="text" id="profile_photo" name="profile_photo">
+        </div>
+        <button>Create Recipient</button>
+    </form>
+    <a href="/recipients">Back</a>
+</body>
+</html>
