@@ -74,8 +74,10 @@ app.get('/recipients/:id/edit', async (req, res) => {
 });
 
 app.put('/recipients/:id', async(req, res) => {
-    console.log('PUT route for recipient editing hit');
-    res.send('Editing recipient.');
+    const {id} = req.params;
+    const {first_name, last_name, award_category, sponsor, year, profile_description, profile_photo} = req.body;
+    const updateRecipient = await Recipient.findByIdAndUpdate(id, {first_name, last_name, award_category, sponsor, year, profile_description, profile_photo}, {returnDocument: 'after', runValidators: true});
+    res.redirect(`/recipients/${id}`);
 });
 
 // Handle the GET route for 'recipients' show page
