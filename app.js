@@ -68,8 +68,10 @@ app.post('/recipients', (req, res) => {
 
 // Handle the PUT route for 'recipients'
 app.get('/recipients/:id/edit', async (req, res) => {
-    console.log('PUT route for recipient edit hit');
-    res.send('Editing recipient');
+    const {id} = req.params;
+    const recipient = await Recipient.findById(id);
+    console.log(recipient);
+    res.render('recipients/edit');
 });
 
 // Handle the GET route for 'recipients' show page
